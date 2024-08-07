@@ -311,6 +311,8 @@ body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: 
 .menu-item-has-children:hover .sub-menu {
   display: block; /* Afficher les sous-menus au survol */
 }
+/* Menu déroulant */
+/* Menu déroulant */
 
 /* Styles pour les petits écrans */
 @media (max-width: 768px) {
@@ -432,13 +434,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
 <div class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-menu-1-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-hb-menu-1">
-<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="primary-site-navigation-desktop" aria-label="Site Navigation: Primary Menu" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope"><div class="main-navigation ast-inline-flex"><ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex  submenu-with-border astra-menu-animation-fade  stack-on-mobile"><li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item menu-item-22"><a href="index.html" aria-current="page" class="menu-link">Accueil</a></li>
-
-<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="about/index.html" class="menu-link">A propos</a></li>
-<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="services/index.html" class="menu-link">Services</a></li>
-<li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21"><a href="portfolio/index.html" class="menu-link">Portfolio</a></li>
-<li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="contact/index.html" class="menu-link">Contact</a></li>
-</ul></div></nav></div></div> </div>
+<div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="primary-site-navigation-desktop" aria-label="Site Navigation: Primary Menu" itemtype="https://schema.org/SiteNavigationElement" itemscope="itemscope">
+  <div class="main-navigation ast-inline-flex">
+      <ul id="ast-hf-menu-1" class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex submenu-with-border astra-menu-animation-fade stack-on-mobile">
+          <li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item menu-item-22">
+              <a href="index.html" aria-current="page" class="menu-link">Accueil</a>
+          </li>
+          <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19">
+              <a href="about/index.html" class="menu-link">A propos</a>
+          </li>
+          <li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23">
+              <a href="services/index.html" class="menu-link">Services</a>
+          </li>
+          <li id="menu-item-21" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21">
+              <a href="portfolio/index.html" class="menu-link">Portfolio</a>
+          </li>
+          <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18">
+              <a href="contact/index.html" class="menu-link">Contact</a>
+          </li>
+          <!-- Menu déroulant pour la sélection de la langue -->
+         
+      </ul>
+  </div>
+</nav>
+</div></div> </div>
 </div>
 </div>
 </div>
@@ -479,6 +498,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="contact/index.html" class="menu-link">Contact</a></li>
+
 </ul></div></nav></div></div> </div>
 </div>
 </div>
@@ -522,28 +542,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="elementor-element elementor-element-dee681c elementor-widget elementor-widget-button" data-id="dee681c" data-element_type="widget" data-widget_type="button.default">
 <div class="elementor-widget-container">
 <p style="margin-top: 40px; color: white;">Vous êtes prêts à lancer votre projet ?</p>
-<div class="elementor-button-wrapper" style="display: flex; align-items: center;">
- 
-    
-    <input type="email" placeholder="Parlez dès maintenant avec un expert" style="margin-right: 10px; padding: 5px; border: 1px solid #ccc; border-radius: 4px; width: 100%; max-width: 300px; box-sizing: border-box;" />
-
-    <style>
-        @media (max-width: 768px) {
-            input[type="email"] {
-                margin-right: 0; /* Supprime la marge à droite sur les petits écrans */
-            }
-        }
-       
-    </style>
+<form id="newsletter-form" action="https://api.web3forms.com/submit" method="POST" style="display: flex; align-items: center;">
+  <input type="hidden" name="access_key" value="caab971e-67f7-4ebc-ace2-865de7bafd3a">
   
-<a class="elementor-button elementor-button-link elementor-size-sm" href="contact/index.html">
-<span class="elementor-button-content-wrapper">
-<span class="elementor-button-icon">
-<i aria-hidden="true" class="fas fa-angle-right"></i> </span>
-<span class="elementor-button-text">Contactez-nous</span>
-</span>
-</a>
-</div>
+  <input type="text" name="contact" placeholder="Parlez avec un expert" style="margin-right: 10px; padding: 5px; border: 1px solid #333; border-radius: 4px; width: 100%; max-width: 300px; box-sizing: border-box;" id="contact-input" required>
+  
+  <button type="submit" class="elementor-button elementor-button-link elementor-size-sm">
+      <span class="elementor-button-content-wrapper">
+          <span class="elementor-button-icon">
+              <i aria-hidden="true" class="fas fa-angle-right"></i>
+          </span>
+          <span class="elementor-button-text">Contactez-nous</span>
+      </span>
+  </button>
+</form>
+
+
+<style>
+  .elementor-button.elementor-button-link.elementor-size-sm {
+    background-color: #00ff73;
+    border: #000;
+}
+.elementor-button-text {
+  color: #000;
+}
+@media (max-width: 768px) {
+    input[type="text"] {
+        margin-right: 0; /* Supprime la marge à droite sur les petits écrans */
+    }
+}
+
+</style>
+
+
+
+
 </div>
 </div>
 </div>
@@ -1103,6 +1136,59 @@ var showcaseCTA = {"adminUrl":"https:\/\/websitedemos.net\/interior-firm-02\/wp-
 <script src="wp-includes/js/jquery/ui/core.min3f14.js?ver=1.13.2" id="jquery-ui-core-js"></script>
 <script id="elementor-frontend-js-before">
 var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.23.1","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"container":true,"container_grid":true,"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_onboarding":true,"home_screen":true,"ai-layout":true,"landing-pages":true,"e_lazyload":true},"urls":{"assets":"https:\/\/websitedemos.net\/interior-firm-02\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/websitedemos.net\/interior-firm-02\/wp-admin\/admin-ajax.php"},"nonces":{"floatingButtonsClickTracking":"8dc64abbe2"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"global_image_lightbox":"yes","active_breakpoints":["viewport_mobile","viewport_tablet"],"lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":5,"title":"Home%20-%20Interior%20Design%20Firm","excerpt":"","featuredImage":false}};
+</script>
+
+<script>
+  document.getElementById('newsletter-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Empêche la soumission du formulaire par défaut
+    
+    // Récupère la valeur du champ
+    const contactInput = document.getElementById('contact-input').value.trim();
+    
+    // Vérifie si l'entrée contient un '@', ce qui indiquerait un e-mail
+    const isEmail = contactInput.includes('@');
+    
+    // Valide que l'entrée est soit un e-mail soit un numéro de téléphone
+    if (!isEmail && !/^\d+$/.test(contactInput)) {
+        alert('Veuillez entrer une adresse e-mail valide ou un numéro de téléphone.');
+        return;
+    }
+
+    if (isEmail && /[^\d]/.test(contactInput)) {
+        // Si c'est un e-mail, assurez-vous qu'il ne contient pas de caractères non numériques
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(contactInput)) {
+            alert('Veuillez entrer une adresse e-mail valide.');
+            return;
+        }
+    } else if (!isEmail) {
+        // Si ce n'est pas un e-mail, assurez-vous que c'est un numéro de téléphone
+        if (contactInput.length < 6) { // Exemple de validation simple pour un numéro de téléphone
+            alert('Veuillez entrer un numéro de téléphone valide.');
+            return;
+        }
+    }
+    
+    // Prépare les données pour l'envoi
+    const formData = new FormData(this);
+    
+    // Soumet le formulaire en utilisant Fetch API
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        // Redirection vers la page de contact après une soumission réussie
+        window.location.href = 'contact/index.html';
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        // Optionnel : afficher un message d'erreur ou faire autre chose en cas d'échec
+    });
+});
+
 </script>
 <script src="wp-content/plugins/elementor/assets/js/frontend.min93d8.js?ver=3.23.1" id="elementor-frontend-js"></script>
 <script src="wp-includes/js/underscore.mind584.js?ver=1.13.4" id="underscore-js"></script>
